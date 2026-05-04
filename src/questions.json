@@ -1,0 +1,812 @@
+{
+  "categories": [
+    {
+      "id": "javascript_typescript",
+      "name": "JavaScript / TypeScript",
+      "questions": [
+        {
+          "id": 1,
+          "difficulty": "easy",
+          "question": "Which keyword declares a block-scoped variable?",
+          "choices": ["var", "let", "define", "scope"],
+          "answer": "let"
+        },
+        {
+          "id": 2,
+          "difficulty": "easy",
+          "question": "Which method converts a JavaScript object into JSON?",
+          "choices": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.encode()"],
+          "answer": "JSON.stringify()"
+        },
+        {
+          "id": 3,
+          "difficulty": "easy",
+          "question": "What is the result of typeof []?",
+          "choices": ["array", "object", "list", "undefined"],
+          "answer": "object"
+        },
+        {
+          "id": 4,
+          "difficulty": "easy",
+          "question": "Which symbol is used for strict equality comparison?",
+          "choices": ["==", "===", "!=", "="],
+          "answer": "==="
+        },
+        {
+          "id": 5,
+          "difficulty": "easy",
+          "question": "Which method adds an item to the end of an array?",
+          "choices": ["push()", "pop()", "shift()", "slice()"],
+          "answer": "push()"
+        },
+        {
+          "id": 6,
+          "difficulty": "easy",
+          "question": "Which TypeScript type allows any value?",
+          "choices": ["unknown", "never", "any", "void"],
+          "answer": "any"
+        },
+        {
+          "id": 7,
+          "difficulty": "easy",
+          "question": "Which keyword exits a loop early?",
+          "choices": ["continue", "break", "stop", "exit"],
+          "answer": "break"
+        },
+        {
+          "id": 8,
+          "difficulty": "easy",
+          "question": "Which method removes the last item of an array?",
+          "choices": ["shift()", "splice()", "pop()", "slice()"],
+          "answer": "pop()"
+        },
+        {
+          "id": 9,
+          "difficulty": "easy",
+          "question": "Which operator is used for optional chaining?",
+          "choices": ["?.", "??", "::", "&&"],
+          "answer": "?."
+        },
+        {
+          "id": 10,
+          "difficulty": "easy",
+          "question": "Which value represents intentional absence of value?",
+          "choices": ["undefined", "null", "false", "0"],
+          "answer": "null"
+        },
+        {
+          "id": 11,
+          "difficulty": "medium",
+          "question": "What is the output type of typeof null?",
+          "choices": ["null", "object", "undefined", "boolean"],
+          "answer": "object"
+        },
+        {
+          "id": 12,
+          "difficulty": "medium",
+          "question": "Which array method creates a new array based on a condition?",
+          "choices": ["map()", "filter()", "reduce()", "find()"],
+          "answer": "filter()"
+        },
+        {
+          "id": 13,
+          "difficulty": "medium",
+          "question": "Which keyword creates a class in JavaScript?",
+          "choices": ["function", "class", "object", "constructor"],
+          "answer": "class"
+        },
+        {
+          "id": 14,
+          "difficulty": "medium",
+          "question": "Which TypeScript keyword defines a reusable object structure?",
+          "choices": ["type", "enum", "extends", "static"],
+          "answer": "type"
+        },
+        {
+          "id": 15,
+          "difficulty": "medium",
+          "question": "What does Array.map() return?",
+          "choices": [
+            "A modified original array",
+            "A new transformed array",
+            "A boolean",
+            "Nothing"
+          ],
+          "answer": "A new transformed array"
+        },
+        {
+          "id": 16,
+          "difficulty": "medium",
+          "question": "Which method finds the first matching item in an array?",
+          "choices": ["filter()", "map()", "find()", "reduce()"],
+          "answer": "find()"
+        },
+        {
+          "id": 17,
+          "difficulty": "medium",
+          "question": "What does NaN stand for?",
+          "choices": ["No assigned number", "Not a Number", "Negative and Null", "Numeric as Null"],
+          "answer": "Not a Number"
+        },
+        {
+          "id": 18,
+          "difficulty": "medium",
+          "question": "Which loop is guaranteed to run at least once?",
+          "choices": ["for", "while", "do...while", "foreach"],
+          "answer": "do...while"
+        },
+        {
+          "id": 19,
+          "difficulty": "medium",
+          "question": "Which method merges arrays into a new array?",
+          "choices": ["push()", "concat()", "join()", "merge()"],
+          "answer": "concat()"
+        },
+        {
+          "id": 20,
+          "difficulty": "medium",
+          "question": "Which keyword is used to inherit from a class in TypeScript?",
+          "choices": ["inherits", "implements", "extends", "super"],
+          "answer": "extends"
+        },
+        {
+          "id": 21,
+          "difficulty": "hard",
+          "question": "What does the 'never' type represent?",
+          "choices": [
+            "A missing value",
+            "A value that never occurs",
+            "An optional type",
+            "A nullable type"
+          ],
+          "answer": "A value that never occurs"
+        },
+        {
+          "id": 22,
+          "difficulty": "hard",
+          "question": "Which method executes a reducer function on an array?",
+          "choices": ["reduce()", "filter()", "map()", "find()"],
+          "answer": "reduce()"
+        },
+        {
+          "id": 23,
+          "difficulty": "hard",
+          "question": "Which keyword refers to the current object context?",
+          "choices": ["self", "current", "this", "object"],
+          "answer": "this"
+        },
+        {
+          "id": 24,
+          "difficulty": "hard",
+          "question": "What is a closure in JavaScript?",
+          "choices": [
+            "A loop inside a function",
+            "A function with preserved lexical scope",
+            "A hidden class method",
+            "A synchronous callback"
+          ],
+          "answer": "A function with preserved lexical scope"
+        },
+        {
+          "id": 25,
+          "difficulty": "hard",
+          "question": "Which TypeScript utility makes all properties optional?",
+          "choices": ["Required<T>", "Readonly<T>", "Partial<T>", "Pick<T>"],
+          "answer": "Partial<T>"
+        },
+        {
+          "id": 26,
+          "difficulty": "hard",
+          "question": "Which event loop queue has higher priority?",
+          "choices": ["Callback queue", "Microtask queue", "Timeout queue", "Render queue"],
+          "answer": "Microtask queue"
+        },
+        {
+          "id": 27,
+          "difficulty": "hard",
+          "question": "What does Promise.all() do?",
+          "choices": [
+            "Runs promises sequentially",
+            "Waits for all promises to resolve",
+            "Stops on first resolve",
+            "Ignores rejected promises"
+          ],
+          "answer": "Waits for all promises to resolve"
+        },
+        {
+          "id": 28,
+          "difficulty": "hard",
+          "question": "Which TypeScript keyword narrows a union type?",
+          "choices": ["guard", "infer", "typeof", "instanceof"],
+          "answer": "instanceof"
+        },
+        {
+          "id": 29,
+          "difficulty": "hard",
+          "question": "What does debounce primarily prevent?",
+          "choices": [
+            "Memory leaks",
+            "Repeated rapid function execution",
+            "Type errors",
+            "Infinite loops"
+          ],
+          "answer": "Repeated rapid function execution"
+        },
+        {
+          "id": 30,
+          "difficulty": "hard",
+          "question": "Which operator provides a fallback for null or undefined?",
+          "choices": ["||", "??", "&&", "=>"],
+          "answer": "??"
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "questions": [
+        {
+          "id": 31,
+          "difficulty": "easy",
+          "question": "Which hook is used to manage state in a functional component?",
+          "choices": ["useEffect", "useState", "useMemo", "useRef"],
+          "answer": "useState"
+        },
+        {
+          "id": 32,
+          "difficulty": "easy",
+          "question": "What does JSX stand for?",
+          "choices": [
+            "JavaScript XML",
+            "Java Syntax Extension",
+            "JSON XML",
+            "JavaScript Extension"
+          ],
+          "answer": "JavaScript XML"
+        },
+        {
+          "id": 33,
+          "difficulty": "easy",
+          "question": "Which prop is required when rendering a list in React?",
+          "choices": ["id", "key", "index", "ref"],
+          "answer": "key"
+        },
+        {
+          "id": 34,
+          "difficulty": "easy",
+          "question": "Which hook is used for side effects?",
+          "choices": ["useRef", "useMemo", "useEffect", "useReducer"],
+          "answer": "useEffect"
+        },
+        {
+          "id": 35,
+          "difficulty": "easy",
+          "question": "React components should start with what type of letter?",
+          "choices": ["Lowercase", "Uppercase", "Number", "Symbol"],
+          "answer": "Uppercase"
+        },
+        {
+          "id": 36,
+          "difficulty": "easy",
+          "question": "Which method renders React into the DOM?",
+          "choices": ["ReactDOM.render()", "React.mount()", "renderDOM()", "React.attach()"],
+          "answer": "ReactDOM.render()"
+        },
+        {
+          "id": 37,
+          "difficulty": "easy",
+          "question": "Which hook keeps a mutable value without re-rendering?",
+          "choices": ["useState", "useMemo", "useRef", "useEffect"],
+          "answer": "useRef"
+        },
+        {
+          "id": 38,
+          "difficulty": "easy",
+          "question": "What is React primarily used for?",
+          "choices": [
+            "Database management",
+            "Building user interfaces",
+            "Server hosting",
+            "Testing APIs"
+          ],
+          "answer": "Building user interfaces"
+        },
+        {
+          "id": 39,
+          "difficulty": "easy",
+          "question": "Which hook memoizes a calculated value?",
+          "choices": ["useMemo", "useRef", "useState", "useEffect"],
+          "answer": "useMemo"
+        },
+        {
+          "id": 40,
+          "difficulty": "easy",
+          "question": "What syntax extension does React use?",
+          "choices": ["TSX", "HTMLX", "JSX", "XMLX"],
+          "answer": "JSX"
+        },
+        {
+          "id": 41,
+          "difficulty": "medium",
+          "question": "What does useEffect dependency array control?",
+          "choices": ["CSS updates", "When the effect runs", "Hook order", "Component structure"],
+          "answer": "When the effect runs"
+        },
+        {
+          "id": 42,
+          "difficulty": "medium",
+          "question": "What does lifting state up mean?",
+          "choices": [
+            "Moving state to parent component",
+            "Deleting unused state",
+            "Converting state to props",
+            "Saving state to localStorage"
+          ],
+          "answer": "Moving state to parent component"
+        },
+        {
+          "id": 43,
+          "difficulty": "medium",
+          "question": "Which hook memoizes a callback function?",
+          "choices": ["useMemo", "useRef", "useCallback", "useReducer"],
+          "answer": "useCallback"
+        },
+        {
+          "id": 44,
+          "difficulty": "medium",
+          "question": "What is prop drilling?",
+          "choices": [
+            "Passing props deeply through components",
+            "Creating nested arrays",
+            "Using refs incorrectly",
+            "Rendering loops"
+          ],
+          "answer": "Passing props deeply through components"
+        },
+        {
+          "id": 45,
+          "difficulty": "medium",
+          "question": "What is the purpose of React.Fragment?",
+          "choices": [
+            "State management",
+            "Grouping elements without extra DOM nodes",
+            "Performance optimization",
+            "Conditional rendering"
+          ],
+          "answer": "Grouping elements without extra DOM nodes"
+        },
+        {
+          "id": 46,
+          "difficulty": "medium",
+          "question": "What does controlled component mean?",
+          "choices": [
+            "Form controlled by React state",
+            "Component with CSS",
+            "Component using hooks",
+            "Component without props"
+          ],
+          "answer": "Form controlled by React state"
+        },
+        {
+          "id": 47,
+          "difficulty": "medium",
+          "question": "Which hook is useful for complex state logic?",
+          "choices": ["useReducer", "useMemo", "useEffect", "useRef"],
+          "answer": "useReducer"
+        },
+        {
+          "id": 48,
+          "difficulty": "medium",
+          "question": "What triggers a React component re-render?",
+          "choices": [
+            "CSS change",
+            "State or props change",
+            "Function declaration",
+            "Import statement"
+          ],
+          "answer": "State or props change"
+        },
+        {
+          "id": 49,
+          "difficulty": "medium",
+          "question": "Which hook is commonly used to access DOM elements?",
+          "choices": ["useMemo", "useRef", "useEffect", "useReducer"],
+          "answer": "useRef"
+        },
+        {
+          "id": 50,
+          "difficulty": "medium",
+          "question": "What is hydration in React?",
+          "choices": [
+            "Updating CSS",
+            "Attaching React to server-rendered HTML",
+            "Loading API data",
+            "Resetting state"
+          ],
+          "answer": "Attaching React to server-rendered HTML"
+        },
+        {
+          "id": 51,
+          "difficulty": "hard",
+          "question": "What problem does React.memo solve?",
+          "choices": [
+            "Memory leaks",
+            "Preventing unnecessary re-renders",
+            "Managing routes",
+            "Handling forms"
+          ],
+          "answer": "Preventing unnecessary re-renders"
+        },
+        {
+          "id": 52,
+          "difficulty": "hard",
+          "question": "What does reconciliation mean in React?",
+          "choices": [
+            "Comparing DOM changes",
+            "Compiling JSX",
+            "Fetching APIs",
+            "Styling components"
+          ],
+          "answer": "Comparing DOM changes"
+        },
+        {
+          "id": 53,
+          "difficulty": "hard",
+          "question": "What is the virtual DOM?",
+          "choices": [
+            "A database",
+            "A lightweight DOM representation",
+            "A CSS framework",
+            "A Node.js package"
+          ],
+          "answer": "A lightweight DOM representation"
+        },
+        {
+          "id": 54,
+          "difficulty": "hard",
+          "question": "Which hook should not be called conditionally?",
+          "choices": ["useEffect", "useState", "All hooks", "useRef"],
+          "answer": "All hooks"
+        },
+        {
+          "id": 55,
+          "difficulty": "hard",
+          "question": "What is stale closure in React?",
+          "choices": [
+            "Closed browser tab",
+            "Function referencing outdated state",
+            "Unmounted component",
+            "Unused variable"
+          ],
+          "answer": "Function referencing outdated state"
+        },
+        {
+          "id": 56,
+          "difficulty": "hard",
+          "question": "What does Suspense help with?",
+          "choices": [
+            "CSS rendering",
+            "Handling async loading states",
+            "State updates",
+            "DOM access"
+          ],
+          "answer": "Handling async loading states"
+        },
+        {
+          "id": 57,
+          "difficulty": "hard",
+          "question": "What is a Higher-Order Component?",
+          "choices": [
+            "Component returning another component",
+            "Component inside state",
+            "Component with hooks",
+            "Nested JSX"
+          ],
+          "answer": "Component returning another component"
+        },
+        {
+          "id": 58,
+          "difficulty": "hard",
+          "question": "What does useImperativeHandle customize?",
+          "choices": ["Props", "Ref exposure", "Memoization", "Effects"],
+          "answer": "Ref exposure"
+        },
+        {
+          "id": 59,
+          "difficulty": "hard",
+          "question": "What is code splitting used for?",
+          "choices": [
+            "Reducing bundle size",
+            "Splitting CSS",
+            "Writing components",
+            "Managing props"
+          ],
+          "answer": "Reducing bundle size"
+        },
+        {
+          "id": 60,
+          "difficulty": "hard",
+          "question": "What does lazy() do in React?",
+          "choices": [
+            "Creates routes",
+            "Loads components dynamically",
+            "Caches state",
+            "Prevents re-renders"
+          ],
+          "answer": "Loads components dynamically"
+        }
+      ]
+    },
+    {
+      "id": "nodejs_express",
+      "name": "Node.js / Express",
+      "questions": [
+        {
+          "id": 61,
+          "difficulty": "easy",
+          "question": "What runtime executes JavaScript outside the browser?",
+          "choices": ["Express", "Node.js", "MongoDB", "Webpack"],
+          "answer": "Node.js"
+        },
+        {
+          "id": 62,
+          "difficulty": "easy",
+          "question": "Which method starts an Express server?",
+          "choices": ["app.listen()", "app.run()", "server.start()", "express.open()"],
+          "answer": "app.listen()"
+        },
+        {
+          "id": 63,
+          "difficulty": "easy",
+          "question": "Which method defines a GET route?",
+          "choices": ["app.post()", "app.route()", "app.get()", "app.fetch()"],
+          "answer": "app.get()"
+        },
+        {
+          "id": 64,
+          "difficulty": "easy",
+          "question": "Which package manager commonly ships with Node.js?",
+          "choices": ["pip", "npm", "composer", "gem"],
+          "answer": "npm"
+        },
+        {
+          "id": 65,
+          "difficulty": "easy",
+          "question": "What file stores Node.js dependencies?",
+          "choices": ["server.js", "package.json", "node.config", "deps.json"],
+          "answer": "package.json"
+        },
+        {
+          "id": 66,
+          "difficulty": "easy",
+          "question": "Which object contains incoming request data?",
+          "choices": ["res", "req", "app", "router"],
+          "answer": "req"
+        },
+        {
+          "id": 67,
+          "difficulty": "easy",
+          "question": "Which object sends a response to the client?",
+          "choices": ["req", "res", "next", "server"],
+          "answer": "res"
+        },
+        {
+          "id": 68,
+          "difficulty": "easy",
+          "question": "What does Express primarily help build?",
+          "choices": ["Databases", "APIs and web servers", "Mobile apps", "CSS frameworks"],
+          "answer": "APIs and web servers"
+        },
+        {
+          "id": 69,
+          "difficulty": "easy",
+          "question": "Which middleware parses JSON bodies?",
+          "choices": ["express.static()", "express.router()", "express.json()", "express.path()"],
+          "answer": "express.json()"
+        },
+        {
+          "id": 70,
+          "difficulty": "easy",
+          "question": "What keyword exports a module in CommonJS?",
+          "choices": ["export", "module.exports", "share", "publish"],
+          "answer": "module.exports"
+        },
+        {
+          "id": 71,
+          "difficulty": "medium",
+          "question": "What does middleware do in Express?",
+          "choices": [
+            "Styles responses",
+            "Processes requests between client and server",
+            "Creates databases",
+            "Compiles code"
+          ],
+          "answer": "Processes requests between client and server"
+        },
+        {
+          "id": 72,
+          "difficulty": "medium",
+          "question": "What is the purpose of next() in middleware?",
+          "choices": [
+            "Stops execution",
+            "Moves to next middleware",
+            "Ends request",
+            "Restarts server"
+          ],
+          "answer": "Moves to next middleware"
+        },
+        {
+          "id": 73,
+          "difficulty": "medium",
+          "question": "Which HTTP status code means Not Found?",
+          "choices": ["200", "301", "404", "500"],
+          "answer": "404"
+        },
+        {
+          "id": 74,
+          "difficulty": "medium",
+          "question": "Which status code means Internal Server Error?",
+          "choices": ["400", "401", "404", "500"],
+          "answer": "500"
+        },
+        {
+          "id": 75,
+          "difficulty": "medium",
+          "question": "What does req.params contain?",
+          "choices": ["Headers", "Route parameters", "Body content", "Cookies"],
+          "answer": "Route parameters"
+        },
+        {
+          "id": 76,
+          "difficulty": "medium",
+          "question": "What does req.query contain?",
+          "choices": ["Body data", "URL query parameters", "Headers", "Cookies"],
+          "answer": "URL query parameters"
+        },
+        {
+          "id": 77,
+          "difficulty": "medium",
+          "question": "Which method serves static files?",
+          "choices": ["express.static()", "app.assets()", "app.files()", "express.public()"],
+          "answer": "express.static()"
+        },
+        {
+          "id": 78,
+          "difficulty": "medium",
+          "question": "What does nodemon do?",
+          "choices": [
+            "Compresses code",
+            "Restarts server on file changes",
+            "Creates routes",
+            "Parses JSON"
+          ],
+          "answer": "Restarts server on file changes"
+        },
+        {
+          "id": 79,
+          "difficulty": "medium",
+          "question": "What does app.use() primarily do?",
+          "choices": ["Defines middleware", "Starts server", "Creates database", "Sends response"],
+          "answer": "Defines middleware"
+        },
+        {
+          "id": 80,
+          "difficulty": "medium",
+          "question": "What is REST commonly used for?",
+          "choices": ["CSS styling", "API architecture", "Database storage", "Frontend rendering"],
+          "answer": "API architecture"
+        },
+        {
+          "id": 81,
+          "difficulty": "hard",
+          "question": "What is the event loop in Node.js?",
+          "choices": [
+            "Routing system",
+            "Mechanism handling async operations",
+            "Database driver",
+            "Middleware stack"
+          ],
+          "answer": "Mechanism handling async operations"
+        },
+        {
+          "id": 82,
+          "difficulty": "hard",
+          "question": "What does process.env contain?",
+          "choices": [
+            "Request data",
+            "Environment variables",
+            "Express routes",
+            "Package dependencies"
+          ],
+          "answer": "Environment variables"
+        },
+        {
+          "id": 83,
+          "difficulty": "hard",
+          "question": "What is a stream in Node.js?",
+          "choices": ["A database", "Continuous flow of data", "An Express route", "A React hook"],
+          "answer": "Continuous flow of data"
+        },
+        {
+          "id": 84,
+          "difficulty": "hard",
+          "question": "What is clustering in Node.js?",
+          "choices": [
+            "Grouping routes",
+            "Running multiple processes",
+            "Combining middleware",
+            "Caching APIs"
+          ],
+          "answer": "Running multiple processes"
+        },
+        {
+          "id": 85,
+          "difficulty": "hard",
+          "question": "What is the purpose of CORS?",
+          "choices": [
+            "Compress responses",
+            "Allow cross-origin requests",
+            "Secure passwords",
+            "Create routes"
+          ],
+          "answer": "Allow cross-origin requests"
+        },
+        {
+          "id": 86,
+          "difficulty": "hard",
+          "question": "What does async/await simplify?",
+          "choices": ["Database queries", "Promise handling", "Routing", "Compression"],
+          "answer": "Promise handling"
+        },
+        {
+          "id": 87,
+          "difficulty": "hard",
+          "question": "What is rate limiting?",
+          "choices": [
+            "Limiting CPU",
+            "Restricting request frequency",
+            "Reducing bundle size",
+            "Sorting middleware"
+          ],
+          "answer": "Restricting request frequency"
+        },
+        {
+          "id": 88,
+          "difficulty": "hard",
+          "question": "What is the purpose of helmet middleware?",
+          "choices": [
+            "Database migration",
+            "Security headers",
+            "Logging requests",
+            "Serving static files"
+          ],
+          "answer": "Security headers"
+        },
+        {
+          "id": 89,
+          "difficulty": "hard",
+          "question": "What does res.status() do?",
+          "choices": [
+            "Starts server",
+            "Sets HTTP response code",
+            "Creates middleware",
+            "Reads request body"
+          ],
+          "answer": "Sets HTTP response code"
+        },
+        {
+          "id": 90,
+          "difficulty": "hard",
+          "question": "What is the purpose of app.Router() or express.Router()?",
+          "choices": [
+            "Database connection",
+            "Grouping routes modularly",
+            "Parsing JSON",
+            "Creating middleware"
+          ],
+          "answer": "Grouping routes modularly"
+        }
+      ]
+    }
+  ]
+}
