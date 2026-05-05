@@ -1,6 +1,6 @@
 import AnimatedDiv from '@/components/animated-div';
 import { AnimatedButton } from '@/components/ui/button';
-import { useAnimateNavigation } from '@/features/quiz/use-animate-navigation';
+import { useAnimateNavigation } from '@/hooks/use-animate-navigation';
 
 export default function Welcome() {
   const { scope, animateAndNavigate } = useAnimateNavigation(
