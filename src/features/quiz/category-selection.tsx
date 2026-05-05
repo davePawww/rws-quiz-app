@@ -25,7 +25,7 @@ const categories = [
 ] as const;
 
 export default function CategorySelection() {
-  const { setCategory } = useQuizStore.getState();
+  const { setCategory, loadQuestions } = useQuizStore.getState();
   const { scope, animateAndNavigate } = useAnimateNavigation(
     '/questions',
     { opacity: 0, x: -100 },
@@ -34,6 +34,7 @@ export default function CategorySelection() {
 
   const handleSelectCategory = async (category: Category) => {
     setCategory(category);
+    loadQuestions();
     await animateAndNavigate();
   };
 
