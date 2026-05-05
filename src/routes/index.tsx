@@ -1,9 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/')({
-  component: RouteComponent,
-});
+import Welcome from '@/features/quiz/welcome';
 
-function RouteComponent() {
-  return <div>Hello /!</div>;
-}
+export const Route = createFileRoute('/')({
+  component: Welcome,
+});

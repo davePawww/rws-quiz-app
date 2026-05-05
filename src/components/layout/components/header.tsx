@@ -14,7 +14,7 @@ export default function Header() {
     <motion.header
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeIn' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       className="flex flex-col items-center justify-between gap-1.5 md:flex-row md:gap-0"
     >
       <h1 className="font-semibold">05-quiz-app</h1>

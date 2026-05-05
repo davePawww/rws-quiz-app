@@ -7,7 +7,7 @@ export default function Content({ children }: ChildrenWrapperProps) {
     <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: 'backIn' }}
+      transition={{ duration: 0.6, ease: 'easeInOut' }}
       className="full-shadow my-4 flex flex-1 flex-col items-center justify-center overflow-y-auto rounded-lg border p-4"
     >
       {children}
