@@ -1,12 +1,12 @@
 import AnimatedDiv from '@/components/animated-div';
 import { AnimatedButton } from '@/components/ui/button';
-import { useAnimateNavigation } from '@/features/quiz/use-animate-navigation';
+import { useAnimateNavigation } from '@/hooks/use-animate-navigation';
 
 export default function Welcome() {
   const { scope, animateAndNavigate } = useAnimateNavigation(
     '/difficulty',
     { opacity: 0, x: -100 },
-    { duration: 0.8, ease: 'anticipate' },
+    { type: 'tween', duration: 0.6, ease: 'easeInOut' },
   );
 
   return (

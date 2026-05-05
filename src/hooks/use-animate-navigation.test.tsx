@@ -3,7 +3,7 @@ import type { Transition } from 'motion/react';
 import { toast } from 'sonner';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { useAnimateNavigation } from '@/features/quiz/use-animate-navigation';
+import { useAnimateNavigation } from '@/hooks/use-animate-navigation';
 
 // --- Mocks ---
 const mockNavigate = vi.fn();
