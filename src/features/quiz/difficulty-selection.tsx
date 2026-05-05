@@ -24,7 +24,7 @@ export default function DifficultySelection() {
   const { scope, animateAndNavigate } = useAnimateNavigation(
     '/category',
     { opacity: 0, x: -100 },
-    { duration: 0.8, ease: 'anticipate' },
+    { type: 'tween', duration: 0.6, ease: 'easeInOut' },
   );
 
   const handleSelectDifficulty = async (difficulty: Difficulty) => {

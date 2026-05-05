@@ -29,7 +29,7 @@ export default function CategorySelection() {
   const { scope, animateAndNavigate } = useAnimateNavigation(
     '/questions',
     { opacity: 0, x: -100 },
-    { duration: 0.8, ease: 'anticipate' },
+    { type: 'tween', duration: 0.6, ease: 'easeInOut' },
   );
 
   const handleSelectCategory = async (category: Category) => {
