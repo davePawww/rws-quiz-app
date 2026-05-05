@@ -1,8 +1,8 @@
 {
   "categories": [
     {
-      "id": "javascript_typescript",
-      "name": "JavaScript / TypeScript",
+      "id": "javascript",
+      "name": "JavaScript",
       "questions": [
         {
           "id": 1,
@@ -538,8 +538,8 @@
       ]
     },
     {
-      "id": "nodejs_express",
-      "name": "Node.js / Express",
+      "id": "nodejs",
+      "name": "Node.js",
       "questions": [
         {
           "id": 61,
