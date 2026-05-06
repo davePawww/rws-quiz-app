@@ -15,9 +15,11 @@ export type QuizStore = {
   currentIndex: number;
   timePerQuestion: number;
   answers: string[];
+  score: number;
   setDifficulty: (selectedDifficulty: Difficulty) => void;
   setCategory: (selectedCategory: Category) => void;
   loadQuestions: () => void;
   incrementCurrentIndex: () => void;
   addToAnswers: (answer: string) => void;
+  addTenPoints: () => void;
 };
