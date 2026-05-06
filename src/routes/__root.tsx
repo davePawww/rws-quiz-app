@@ -1,4 +1,4 @@
-import { Outlet, createRootRoute } from '@tanstack/react-router';
+import { Outlet, createRootRoute, useLocation } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { AnimatePresence } from 'motion/react';
 
@@ -10,10 +10,12 @@ export const Route = createRootRoute({
 });
 
 function RouteComponent() {
+  const location = useLocation();
+
   return (
     <>
       <App>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" key={location.pathname}>
           <Outlet />
         </AnimatePresence>
         <Toaster />
