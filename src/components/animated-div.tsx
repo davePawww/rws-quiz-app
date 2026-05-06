@@ -15,6 +15,7 @@ export default function AnimatedDiv({
       animate={{ opacity: 1, x: 0 }}
       transition={{ type: 'tween', duration: 0.5, ease: 'circOut' }}
       className={cn(className)}
+      style={{ willChange: 'transform, opacity' }} // ← offload to GPU
       {...props}
     >
       {children}

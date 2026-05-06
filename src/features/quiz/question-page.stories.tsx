@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { createMemoryHistory, createRouter, RouterContextProvider } from '@tanstack/react-router';
 
 import QuestionPage from '@/features/quiz/question-page';
 import { useQuizStore } from '@/features/quiz/quiz.store';
+import { routeTree } from '@/routeTree.gen';
 
 const mockQuestions = [
   {
@@ -38,11 +40,21 @@ const meta = {
   tags: ['autodocs'],
   decorators: [
     (Story) => {
+      const router = createRouter({
+        routeTree,
+        history: createMemoryHistory(),
+      });
+
       useQuizStore.setState({
         questions: mockQuestions,
         currentIndex: 0,
       });
-      return <Story />;
+
+      return (
+        <RouterContextProvider router={router}>
+          <Story />
+        </RouterContextProvider>
+      );
     },
   ],
 } satisfies Meta<typeof QuestionPage>;

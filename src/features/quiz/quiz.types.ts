@@ -13,8 +13,11 @@ export type QuizStore = {
   category: Category;
   questions: Question[];
   currentIndex: number;
+  timePerQuestion: number;
+  answers: string[];
   setDifficulty: (selectedDifficulty: Difficulty) => void;
   setCategory: (selectedCategory: Category) => void;
   loadQuestions: () => void;
   incrementCurrentIndex: () => void;
+  addToAnswers: (answer: string) => void;
 };
