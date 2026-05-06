@@ -7,15 +7,16 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   difficulty: '',
   category: '',
   questions: [],
+  currentIndex: 0,
   setDifficulty: (selectedDifficulty: Difficulty) => set({ difficulty: selectedDifficulty }),
   setCategory: (selectedCategory: Category) => set({ category: selectedCategory }),
   loadQuestions: () => {
     const { difficulty, category } = get();
-
     const filteredQuestions = questionsJson.categories
       .find((c) => category === c.id)
       ?.questions.filter((q) => q.difficulty === difficulty);
 
     set({ questions: filteredQuestions });
   },
+  incrementCurrentIndex: () => set((state) => ({ currentIndex: state.currentIndex + 1 })),
 }));

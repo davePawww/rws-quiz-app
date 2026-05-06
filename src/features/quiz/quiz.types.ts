@@ -12,7 +12,9 @@ export type QuizStore = {
   difficulty: Difficulty;
   category: Category;
   questions: Question[];
+  currentIndex: number;
   setDifficulty: (selectedDifficulty: Difficulty) => void;
   setCategory: (selectedCategory: Category) => void;
   loadQuestions: () => void;
+  incrementCurrentIndex: () => void;
 };
