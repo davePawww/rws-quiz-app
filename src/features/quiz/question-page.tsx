@@ -25,12 +25,20 @@ export default function QuestionPage() {
     if (selectedAnswer === questions[currentIndex].answer) {
       addTenPoints();
     }
-    void animateAndNavigate(
-      { opacity: 0, x: -100 },
-      { type: 'tween', duration: 0.6, ease: 'easeInOut' },
-      `/questions/${questions[currentIndex + 1]?.id}`,
-      incrementCurrentIndex,
-    );
+    if (currentIndex + 1 === questions.length) {
+      return void animateAndNavigate(
+        { opacity: 0, x: -100 },
+        { type: 'tween', duration: 0.6, ease: 'easeInOut' },
+        `/results`,
+      );
+    } else {
+      void animateAndNavigate(
+        { opacity: 0, x: -100 },
+        { type: 'tween', duration: 0.6, ease: 'easeInOut' },
+        `/questions/${questions[currentIndex + 1]?.id}`,
+        incrementCurrentIndex,
+      );
+    }
   };
 
   return (
