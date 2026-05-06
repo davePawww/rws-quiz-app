@@ -10,6 +10,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   currentIndex: 0,
   timePerQuestion: 0,
   answers: [],
+  score: 0,
   setDifficulty: (selectedDifficulty: Difficulty) => {
     const timer = selectedDifficulty === 'easy' ? 30 : selectedDifficulty === 'medium' ? 45 : 60;
     set({ difficulty: selectedDifficulty, timePerQuestion: timer });
@@ -25,4 +26,5 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   },
   incrementCurrentIndex: () => set((state) => ({ currentIndex: state.currentIndex + 1 })),
   addToAnswers: (answer: string) => set((state) => ({ answers: [answer, ...state.answers] })),
+  addTenPoints: () => set((state) => ({ score: state.score + 10 })),
 }));

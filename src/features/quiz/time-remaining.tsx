@@ -27,9 +27,13 @@ export default function TimeRemaining({
 
   useEffect(() => {
     if (remainingTime === 0) {
-      const { currentIndex, questions, incrementCurrentIndex } = useQuizStore.getState();
+      const { currentIndex, questions, incrementCurrentIndex, addTenPoints } =
+        useQuizStore.getState();
       stop();
       addToAnswers(selectedAnswer);
+      if (selectedAnswer === questions[currentIndex].answer) {
+        addTenPoints();
+      }
       void animateAndNavigate(
         { opacity: 0, x: -100 },
         { type: 'tween', duration: 0.6, ease: 'easeInOut' },

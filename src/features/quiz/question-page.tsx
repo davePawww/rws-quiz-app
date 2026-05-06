@@ -17,9 +17,14 @@ export default function QuestionPage() {
   const { scope, animateAndNavigate } = useAnimateNavigation();
   const addToAnswers = useQuizStore((state) => state.addToAnswers);
   const [selectedAnswer, setSelectedAnswer] = useState('');
+  const addTenPoints = useQuizStore((state) => state.addTenPoints);
+  const score = useQuizStore((state) => state.score);
 
   const handleSubmit = () => {
     addToAnswers(selectedAnswer);
+    if (selectedAnswer === questions[currentIndex].answer) {
+      addTenPoints();
+    }
     void animateAndNavigate(
       { opacity: 0, x: -100 },
       { type: 'tween', duration: 0.6, ease: 'easeInOut' },
@@ -31,8 +36,9 @@ export default function QuestionPage() {
   return (
     <AnimatePresence key={pathname}>
       <AnimatedDiv ref={scope} className="space-y-8">
-        <div>
+        <div className="flex items-center justify-between">
           <TimeRemaining animateAndNavigate={animateAndNavigate} selectedAnswer={selectedAnswer} />
+          <p className="text-muted-foreground text-sm">Score: {score}</p>
         </div>
         <h4 className="scroll-m-20 text-center text-xl font-semibold tracking-tight">
           {questions[currentIndex].question}
