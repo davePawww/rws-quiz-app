@@ -21,15 +21,15 @@ const difficulties = [
 
 export default function DifficultySelection() {
   const { setDifficulty } = useQuizStore.getState();
-  const { scope, animateAndNavigate } = useAnimateNavigation(
-    '/category',
-    { opacity: 0, x: -100 },
-    { type: 'tween', duration: 0.6, ease: 'easeInOut' },
-  );
+  const { scope, animateAndNavigate } = useAnimateNavigation();
 
   const handleSelectDifficulty = async (difficulty: Difficulty) => {
     setDifficulty(difficulty);
-    await animateAndNavigate();
+    await animateAndNavigate(
+      { opacity: 0, x: -100 },
+      { type: 'tween', duration: 0.6, ease: 'easeInOut' },
+      '/category',
+    );
   };
 
   return (

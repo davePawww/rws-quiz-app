@@ -25,17 +25,20 @@ const categories = [
 ] as const;
 
 export default function CategorySelection() {
-  const { setCategory, loadQuestions } = useQuizStore.getState();
-  const { scope, animateAndNavigate } = useAnimateNavigation(
-    '/questions',
-    { opacity: 0, x: -100 },
-    { type: 'tween', duration: 0.6, ease: 'easeInOut' },
-  );
+  const setCategory = useQuizStore((state) => state.setCategory);
+  const loadQuestions = useQuizStore((state) => state.loadQuestions);
+  const { scope, animateAndNavigate } = useAnimateNavigation();
 
   const handleSelectCategory = async (category: Category) => {
     setCategory(category);
     loadQuestions();
-    await animateAndNavigate();
+
+    const { questions, currentIndex } = useQuizStore.getState();
+    await animateAndNavigate(
+      { opacity: 0, x: -100 },
+      { type: 'tween', duration: 0.6, ease: 'easeInOut' },
+      `/questions/${questions[currentIndex]?.id}`,
+    );
   };
 
   return (

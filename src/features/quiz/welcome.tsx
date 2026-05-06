@@ -3,11 +3,7 @@ import { AnimatedButton } from '@/components/ui/button';
 import { useAnimateNavigation } from '@/hooks/use-animate-navigation';
 
 export default function Welcome() {
-  const { scope, animateAndNavigate } = useAnimateNavigation(
-    '/difficulty',
-    { opacity: 0, x: -100 },
-    { type: 'tween', duration: 0.6, ease: 'easeInOut' },
-  );
+  const { scope, animateAndNavigate } = useAnimateNavigation();
 
   return (
     <AnimatedDiv ref={scope} className="max-w-sm md:max-w-md">
@@ -17,7 +13,16 @@ export default function Welcome() {
       <p className="text-muted-foreground mt-1 text-center text-sm font-medium md:max-w-sm">
         Where knowledge meets its match. Choose wisely, answer quickly, and try not to panic.
       </p>
-      <AnimatedButton className="mx-auto mt-6 block" onClick={() => void animateAndNavigate()}>
+      <AnimatedButton
+        className="mx-auto mt-6 block"
+        onClick={() =>
+          void animateAndNavigate(
+            { opacity: 0, x: -100 },
+            { type: 'tween', duration: 0.6, ease: 'easeInOut' },
+            '/difficulty',
+          )
+        }
+      >
         Start the Quiz!
       </AnimatedButton>
     </AnimatedDiv>

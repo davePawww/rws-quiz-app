@@ -35,7 +35,7 @@ describe('useAnimateNavigation', () => {
   });
 
   it('returns scope and animateAndNavigate function', () => {
-    const { result } = renderHook(() => useAnimateNavigation(path, exitAnimation, transition));
+    const { result } = renderHook(() => useAnimateNavigation());
 
     expect(result.current.scope).toBe(mockScope);
     expect(typeof result.current.animateAndNavigate).toBe('function');
@@ -44,16 +44,16 @@ describe('useAnimateNavigation', () => {
   it('does nothing when scope.current is null', async () => {
     mockScope.current = null!;
 
-    const { result } = renderHook(() => useAnimateNavigation(path, exitAnimation, transition));
-    await act(() => result.current.animateAndNavigate());
+    const { result } = renderHook(() => useAnimateNavigation());
+    await act(() => result.current.animateAndNavigate(exitAnimation, transition, path));
 
     expect(mockAnimate).not.toHaveBeenCalled();
     expect(mockNavigate).not.toHaveBeenCalled();
   });
 
   it('animates then navigates to the given path on success', async () => {
-    const { result } = renderHook(() => useAnimateNavigation(path, exitAnimation, transition));
-    await act(() => result.current.animateAndNavigate());
+    const { result } = renderHook(() => useAnimateNavigation());
+    await act(() => result.current.animateAndNavigate(exitAnimation, transition, path));
 
     expect(mockAnimate).toHaveBeenCalledWith(mockScope.current, exitAnimation, transition);
     expect(mockNavigate).toHaveBeenCalledWith({ to: path });
@@ -63,8 +63,8 @@ describe('useAnimateNavigation', () => {
   it('shows toast and navigates to / when animate throws', async () => {
     mockAnimate.mockRejectedValue(new Error('animation failed'));
 
-    const { result } = renderHook(() => useAnimateNavigation(path, exitAnimation, transition));
-    await act(() => result.current.animateAndNavigate());
+    const { result } = renderHook(() => useAnimateNavigation());
+    await act(() => result.current.animateAndNavigate(exitAnimation, transition, path));
 
     expect(toast.error).toHaveBeenCalledWith('There was an issue with the animation or navigation');
     expect(mockNavigate).toHaveBeenCalledWith({ to: '/' });
@@ -73,8 +73,8 @@ describe('useAnimateNavigation', () => {
   it('shows toast and navigates to / when navigate throws', async () => {
     mockNavigate.mockRejectedValueOnce(new Error('navigation failed'));
 
-    const { result } = renderHook(() => useAnimateNavigation(path, exitAnimation, transition));
-    await act(() => result.current.animateAndNavigate());
+    const { result } = renderHook(() => useAnimateNavigation());
+    await act(() => result.current.animateAndNavigate(exitAnimation, transition, path));
 
     expect(toast.error).toHaveBeenCalledWith('There was an issue with the animation or navigation');
     expect(mockNavigate).toHaveBeenCalledWith({ to: '/' });
