@@ -39,7 +39,12 @@ export default function QuestionPage() {
         </h4>
         <div className="grid grid-rows-4 gap-2 md:grid-cols-2 md:grid-rows-none">
           {questions[currentIndex].choices.map((c) => (
-            <Choice key={c} choice={c} onClick={() => setSelectedAnswer(c)} />
+            <Choice
+              key={c}
+              choice={c}
+              selectedAnswer={selectedAnswer}
+              onClick={() => setSelectedAnswer(c)}
+            />
           ))}
         </div>
         <div className="flex items-center justify-between">
