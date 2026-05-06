@@ -1,9 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/results')({
-  component: RouteComponent,
-});
+import ResultPage from '@/features/quiz/result-page';
 
-function RouteComponent() {
-  return <div>Hello /results!</div>;
-}
+export const Route = createFileRoute('/results')({
+  component: ResultPage,
+});

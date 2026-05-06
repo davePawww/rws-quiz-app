@@ -25,6 +25,16 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set({ questions: filteredQuestions });
   },
   incrementCurrentIndex: () => set((state) => ({ currentIndex: state.currentIndex + 1 })),
-  addToAnswers: (answer: string) => set((state) => ({ answers: [answer, ...state.answers] })),
+  addToAnswers: (answer: string) => set((state) => ({ answers: [...state.answers, answer] })),
   addTenPoints: () => set((state) => ({ score: state.score + 10 })),
+  resetQuiz: () =>
+    set({
+      difficulty: '',
+      category: '',
+      questions: [],
+      currentIndex: 0,
+      timePerQuestion: 0,
+      answers: [],
+      score: 0,
+    }),
 }));

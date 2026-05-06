@@ -22,4 +22,5 @@ export type QuizStore = {
   incrementCurrentIndex: () => void;
   addToAnswers: (answer: string) => void;
   addTenPoints: () => void;
+  resetQuiz: () => void;
 };
