@@ -8,7 +8,12 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   category: '',
   questions: [],
   currentIndex: 0,
-  setDifficulty: (selectedDifficulty: Difficulty) => set({ difficulty: selectedDifficulty }),
+  timePerQuestion: 0,
+  answers: [],
+  setDifficulty: (selectedDifficulty: Difficulty) => {
+    const timer = selectedDifficulty === 'easy' ? 30 : selectedDifficulty === 'medium' ? 45 : 60;
+    set({ difficulty: selectedDifficulty, timePerQuestion: timer });
+  },
   setCategory: (selectedCategory: Category) => set({ category: selectedCategory }),
   loadQuestions: () => {
     const { difficulty, category } = get();
@@ -19,4 +24,5 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set({ questions: filteredQuestions });
   },
   incrementCurrentIndex: () => set((state) => ({ currentIndex: state.currentIndex + 1 })),
+  addToAnswers: (answer: string) => set((state) => ({ answers: [answer, ...state.answers] })),
 }));
