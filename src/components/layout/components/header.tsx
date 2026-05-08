@@ -24,7 +24,7 @@ export default function Header() {
         </Button>
         <Separator orientation="vertical" />
         <Button variant={'outline'} asChild>
-          <a href="https://rws-quiz-app.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/davePawww/rws-quiz-app/" target="_blank" rel="noopener noreferrer">
             <FaGithub /> Code
           </a>
         </Button>
